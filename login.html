@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f6369706ad.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background:rgba(0, 140, 255, 0.904);
+        }
+        .login-img{
+            height:150px;
+            width:312px;
+            box-sizing: border-box;
+        }
+        .img{
+            height:150px;
+            width:312px;
+        }
+        .login-card{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            background:white;
+            box-shadow:0px 0px 20px 1px rgba(0,0,0,0.7);
+        }
+        .icon-box{
+            border:1px solid rgba(0,0,0,0.4);
+            padding:8px;
+        }
+        .login-input{
+            padding:10px;
+            outline:none;
+            width:210px;
+            border:1px solid rgba(0,0,0,0.4);
+        }
+        .login-input:focus{
+            color:rgba(0, 140, 255, 0.904);
+            font-weight: bold;
+            border:2px solid rgba(0, 140, 255, 0.904);
+        }
+        
+        .login-form{
+            padding:20px;
+            margin-top:10px;
+        }
+        .forget{
+            float:right;
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        .remainder{
+            border:0;
+        }
+        .login-card{
+            height:400px;
+        }
+        .icon-img{
+            width:20px;
+            height:15px;
+        }
+        .icon-box,.login-input,.forget,.remainder,label center{
+            opacity:0.8;
+        }
+        .login-btn{
+            color:white;
+            width:272px;
+            padding:10px;
+            background-color:rgba(0, 140, 255, 0.904);
+            border:0px;
+            cursor:pointer;
+        }
+        a:hover{
+            color:rgba(0, 140, 255, 0.904);
+        }
+        .float{
+            color:white;
+            position:absolute;
+            top:15%;
+            left:31%;
+            letter-spacing: 2px;
+            font-size:28px;
+        }
+        
+    </style>
+    <title>Sign In Page</title>
+</head>
+<body>
+    <div class="login-card">
+        <div class="login-img">
+            <img class="img"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT66GPNPp6SpfzgCVlaLRYl96OBmXxcECix4g&usqp=CAU" alt="image"/>
+        </div>
+        <label class="float">SIGN IN</label>
+        <form class="login-form" action="#" >
+        <div class="focus-color">
+        <label class="icon-box icon1" ><i class="fa fa-envelope"></i></label>
+        <input class="login-input click1" type="text" placeholder="User name" /></div>
+        <div class="focus-color">
+        <label class="icon-box icon2" ><i class="fa fa-lock" ></i></label>
+        <input class="login-input click2" type="password" placeholder="Your Password" /></div><br>
+        <input class="remainder" type="checkbox" /><label >Remember me</label>
+        <label class="forget" ><a href="#" >Forget Password?</a></label><br><br>
+        <button class="login-btn"><center>Sign me in Now</center></button><br><br>
+        <label><center>I'm new here.<a href="#">I want an account.</a></center></label><br>
+    </form>
+    </div>
+    <script>
+        var input1=document.querySelector(".click1")
+        var input2=document.querySelector(".click2")
+        var backgd1=document.querySelector(".icon1")
+        var backgd2=document.querySelector(".icon2")
+
+        input1.addEventListener("focus",function(){
+            backgd1.style.backgroundColor="rgba(0, 140, 255, 0.904)";
+        })
+        input2.addEventListener("focus",function(){
+            backgd2.style.backgroundColor="rgba(0, 140, 255, 0.904)";
+        })
+        input2.addEventListener("blur",function(){
+            backgd2.style.backgroundColor="white";
+        })
+
+        input1.addEventListener("blur",function(){
+            backgd1.style.backgroundColor="white";
+        })
+    </script>
+</body>
+</html>
