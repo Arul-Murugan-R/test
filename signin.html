@@ -8,9 +8,13 @@
     <style>   
         .signin-form{
             padding:30px 20px;
+            position: relative;
+            top:100px;
         }
         .container{
+            height:550px;
             background-color:black;
+            background:url("Background.jpg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -18,6 +22,7 @@
             left:50%;
             top:50%;
             transform:translate(-50%,-50%);
+            border-radius: 7px;
         }
         .signin-title {
             font-family: 'Salsa';
@@ -80,7 +85,7 @@
 <body>
     <div class="container">
         <form class="signin-form" action="#">
-        <label class="signin-title" >Sign In</label>
+        <!-- <label class="signin-title" >Sign In</label> -->
         <div class="value">
             <label class="username">Username</label><br>
             <input class="signin-input" type="text" name="username" placeholder="Type your username" /> 
@@ -92,7 +97,7 @@
         <label class="forget" >Forget Password?</label><br><br>
         <center><button class="signin-button" >Sign In</button></center>
         <!-- <center><input class="signin-button" type="submit" name="submit" placeholder="Sign In" /></center> -->
-    <img class="signin-img" src="./bgeditedimg-removebg-preview.png" />
+    <!-- <img class="signin-img" src="./bgeditedimg-removebg-preview.png" /> -->
 </form>
     </div>
 </body>
