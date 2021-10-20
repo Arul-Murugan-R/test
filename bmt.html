@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href='https://fonts.googleapis.com/css?family=Salsa' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/f6369706ad.js" crossorigin="anonymous"></script><script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <script src="https://kit.fontawesome.com/f6369706ad.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <title>Index Page</title>
     <style>
         body{
@@ -36,6 +37,29 @@
         }
         .centerIcons{
             padding-left:32%;
+        }
+        .hidden-navbar{
+            background-color: #E5E5E5;
+            transition-duration: 0.3s;
+        }
+        .hidden{
+            display:inline;
+            padding:5px;
+        }
+        .hidden li{
+            list-style: none;
+            margin:3px;
+            padding:3px;
+        }
+        .hidden li:hover{
+            background-color: #13BDC8;
+        }
+        .hidden li a{
+            color:#fff;
+            text-decoration: none;
+            letter-spacing:3px;
+            font-size:20px;
+            margin:10px;
         }
         .logo{
             position:relative;
@@ -72,7 +96,7 @@
             display:flex;
             flex-wrap: wrap;
             justify-content:space-around;  
-            margin:0px 8% ;      
+            margin:10px 8% ;      
         }
         .trip-detail{
             background-color:white;
@@ -90,7 +114,7 @@
             background-color: #13BDC8;
             border:0px;
             outline:none;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             width:80px;
             padding:2px;
             cursor: pointer;
@@ -146,21 +170,47 @@
 <body>
     <div class="nav-bar">
             <ul class="nav-ul">
-                <li class="leftIcons"><a href="#"><span class="iconify building" data-icon="jam:building-f" style="color: white;" data-width="40"></span><br><span>BookMyTrip.com</span></a></li>
-                <li class="centerIcons"><a href="#"><span class="iconify" data-icon="jam:train-f" style="color: white;" data-width="50"></span><span class="logo">Train Ticket Booking</span></a></li>
-                <li class="rightIcons"><a href="#"><span class="iconify" data-icon="jam:bar-chart" style="color: white;" data-width="40" data-rotate="90deg"></span></a><a href="#"><span class="iconify" data-icon="jam:user" style="color: white;" data-width="40"></span></a></li>
+                <li class="leftIcons">
+                    <a href="#">
+                        <span class="iconify building" data-icon="jam:building-f" style="color: white;" data-width="30"></span><br>
+                        <span>BookMyTrip.com</span>
+                    </a>
+                </li>
+                <li class="centerIcons">
+                    <a href="#">
+                        <span class="iconify" data-icon="jam:train-f" style="color: white;" data-width="50"></span>
+                        <span class="logo">Train Ticket Booking</span>
+                    </a>
+                </li>
+                <li class="rightIcons">
+                    <a href="#" class="barChart">
+                        <span class="iconify" data-icon="jam:bar-chart" style="color: white;" data-width="40" data-rotate="90deg"></span>
+                    </a>
+                    <a href="#">
+                        <span class="iconify user" data-icon="jam:user" style="color: white;" data-width="40"></span>
+                    </a>
+                </li>
             </ul>
+    </div>
+    <div class="hidden-navbar" style="display: none;">
+        <ul class="hidden">  
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">SignIn</a></li>
+            <li><a href="#">SignUp</a></li>
+        </ul>
+
     </div>
     <center>
     <div class="main-layout">
         <div class="search-engine">
             <form action="#" >
-<!--                 <img class="search-icon" src="img/search.svg" /> -->
                 <span class="iconify search-icon" data-icon="jam:search" data-width="34" data-height="24"></span>
+                <!-- <img class="search-icon" src="img/search.svg" /> -->
                 <input class="search-input" type="text" placeholder="From" />
                 <input class="search-input" type="text" placeholder="To" />
-<!--                 <img class="search-icon" src="img/calendar-alt.svg" /> -->        
                 <span class="iconify search-icon" data-icon="jam:calendar-alt" data-width="34" data-height="24"></span>
+                <!-- <img class="search-icon" src="img/calendar-alt.svg" /> -->
                 <input class="search-input" type="date" placeholder="Depart Date" />
                 <button class="btn" >Search</button>
             </form>
@@ -205,5 +255,17 @@
             </div>
         </div>
     </center>
+    <script>
+        let drop=document.querySelector('.barChart')
+        let dropDown=document.querySelector('.hidden-navbar')
+        drop.addEventListener("click",function(){
+            if(dropDown.style.display=="none"){
+                dropDown.style.display="block"
+            }
+            else{
+                dropDown.style.display="none"
+            }
+        })
+    </script>
 </body>
 </html>
