@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://fonts.googleapis.com/css?family=Salsa' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f6369706ad.js" crossorigin="anonymous"></script><script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <title>Index Page</title>
+    <style>
+        body{
+            font-family:'Salsa';
+            margin:0px;
+        }
+        .nav-bar{
+            background-color: #13BDC8;
+            padding:4px;
+        }
+        .nav-ul{
+            display:flex;
+        }
+        .nav-ul li{
+            list-style: none;
+        }
+        .nav-ul li a{
+            color:white;
+            text-decoration: none;
+            
+        }
+        .leftIcons{
+            text-align:center;
+        }
+        .rightIcons{
+            position:absolute;
+            right:10px;
+        }
+        .centerIcons{
+            padding-left:32%;
+        }
+        .logo{
+            position:relative;
+            top:-18px;
+        }
+        .search-icon{
+            position: relative;
+            height:25px;
+            top:7px;
+        }
+        .search-input{
+            width:170px;
+            height:25px;
+            margin:30px 15px;
+            font-family: 'Salsa';
+            background-color: #E5E5E5;
+            border:1px solid rgba(0,0,0,0.4);
+            outline:none;
+            transition-duration: 0.6s;
+        }
+        .btn{
+            font-family: 'Salsa';
+            padding:8px 10px;
+            color:white;
+            background-color: #13BDC8;
+            border:0px;
+            cursor: pointer;
+            outline:none;
+        }
+        
+        .filter-card{
+            background-color: #E5E5E5;
+            padding:20px;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content:space-around;  
+            margin:0px 8% ;      
+        }
+        .trip-detail{
+            background-color:white;
+            color:black;
+            display:inline-block;
+            padding:8px 20px;
+            margin:10px;
+            letter-spacing: 2px;
+            font-size:20px;
+            width: 380px;
+        }
+        .trip-detail .details-btn{
+            font-family: 'Salsa';
+            color:white;
+            background-color: #13BDC8;
+            border:0px;
+            outline:none;
+            letter-spacing: 3px;
+            width:80px;
+            padding:2px;
+            cursor: pointer;
+            margin:0px 10px;
+        }
+        @media (max-width:660px){
+            .centerIcons{
+                padding-left:20px;
+            }
+        }
+        @media (max-width:600px){
+            .search-input{
+                margin:10px;
+            }
+            .trip-detail{
+                width:300px;
+                font-size: 15px;
+                letter-spacing:1.2px;
+                padding:8px 15px;
+            }
+            .trip-detail .details-btn{
+                width:50px;
+                letter-spacing: 1px;
+                margin:0px 5px;
+            }
+        }
+        @media (max-width:500px){
+            .search-input{
+                margin:10px;
+            }
+            .trip-detail{
+                width:230px;
+                font-size: 12px;
+                letter-spacing:1px;
+                padding:8px 12px;
+            }
+            .leftIcons{
+                display:none;
+            }
+            .centerIcons{
+                padding-left:0px;
+                font-size: 13px;
+            }
+            .centerIcons .building{
+                width:25px;
+            }
+            .nav-bar{
+                padding:1px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+            <ul class="nav-ul">
+                <li class="leftIcons"><a href="#"><span class="iconify building" data-icon="jam:building-f" style="color: white;" data-width="40"></span><br><span>BookMyTrip.com</span></a></li>
+                <li class="centerIcons"><a href="#"><span class="iconify" data-icon="jam:train-f" style="color: white;" data-width="50"></span><span class="logo">Train Ticket Booking</span></a></li>
+                <li class="rightIcons"><a href="#"><span class="iconify" data-icon="jam:bar-chart" style="color: white;" data-width="40" data-rotate="90deg"></span></a><a href="#"><span class="iconify" data-icon="jam:user" style="color: white;" data-width="40"></span></a></li>
+            </ul>
+    </div>
+    <center>
+    <div class="main-layout">
+        <div class="search-engine">
+            <form action="#" >
+                <img class="search-icon" src="img/search.svg" />
+                <input class="search-input" type="text" placeholder="From" />
+                <input class="search-input" type="text" placeholder="To" />
+                <img class="search-icon" src="img/calendar-alt.svg" />
+                <input class="search-input" type="date" placeholder="Depart Date" />
+                <button class="btn" >Search</button>
+            </form>
+        </div>
+    </div></center>
+    <center>
+        <div class="availability">
+            <h1>Top Train Routes</h1>
+            <div class="filter-card">
+                <div class="trip-detail">
+                    <label class="title" >Mumbai Central - Pune</label>
+                    <button class="details-btn" >Click</button>
+                </div>
+                <div class="trip-detail">
+                    <label class="title" >Jaipur - Ahmedabad</label>
+                    <button class="details-btn" >Click</button>
+                </div>
+                <div class="trip-detail">
+                    <label class="title" >New Delhi - Lucknow</label>
+                    <button class="details-btn" >Click</button>
+                </div>
+                <div class="trip-detail">
+                    <label class="title" >Mumbai Central - Pune</label>
+                    <button class="details-btn" >Click</button>
+                </div>
+                <div class="trip-detail">
+                    <label class="title" >Jaipur - Ahmedabad</label>
+                    <button class="details-btn" >Click</button>
+                </div>
+                <div class="trip-detail">
+                    <label class="title" >Mumbai Central - Pune</label>
+                    <button class="details-btn" >Click</button>
+                </div>
+                <div class="trip-detail">
+                    <label class="title" >New Delhi - Lucknow</label>
+                    <button class="details-btn" >Click</button>
+                </div>
+                <div class="trip-detail">
+                    <label class="title" >Jaipur - Ahmedabad</label>
+                    <button class="details-btn" >Click</button>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+</html>
