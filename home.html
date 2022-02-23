@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Home Page</title>
+    <style>
+        body{
+            font-family:San Francisco;
+            background-color: #111;
+        }
+        .navbar.scrolled{
+            background-color:#111 !important;
+        }
+        #myCarousel .carousel-item{
+            height:430px;
+            background-color:#000;
+            color:white;
+            box-sizing: border-box;
+        }
+
+        #myCarousel .container{
+            display:flex;
+        }
+        #myCarousel .content{
+            margin-top:15%;
+            width:450px;
+            height:100%;
+            word-wrap:wrap;
+            
+        }
+        #myCarousel .content p{
+            height:70px;
+            overflow: hidden;
+        }
+        .image-content{
+            height: 100%;
+            width: 900px;
+        }
+        .image-content img{
+            width:100%;
+        }
+        .search{
+            margin-top:5px;
+            height:23px;
+            border-radius: 23px;
+        }
+        h2{
+            color:white;
+            margin-left:20px;
+            margin-top:10px;
+        }
+        .card{
+            width:170px;
+            height:228px;
+            margin:3px;
+            transition:transform 1s;
+        }
+        .card:hover{
+            transform:scale(1.20);
+        }
+        .card img{
+            width:100%;
+            height:100%;
+        }
+        #listCarousel .container{
+            padding:10px;
+            padding-top:40px;
+            
+            height:300px;
+        }
+    </style>
+  </head>
+  <body>
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Web Series</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Crunch</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
+              <img src="./images/profile.png" />
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- Carousel -->
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" ></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+        </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+            <div class="container">
+            <div class="content">
+                <img src="./images/titleimage.png" alt=""/></br></br>
+                <p>When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.
+                </p>
+                <button class="btn btn-light"><span class="fw-bold px-3">Watch now</span></button>
+                <button class="btn btn-dark border-white border-2">Add to playlist</button>
+
+            </div>
+            <div class="image-content">
+                <img src="./images/stplay.png" alt="">
+            </div>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <div class="container">
+            <div class="content">
+                <h1>Slide 2</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quisquam voluptatum et exercitationem natus ex sed, iure, nam aperiam, obcaecati eius ab dolores quasi adipisci ipsa dolor? Consectetur, voluptatum officia!
+                </p>
+                <button class="btn btn-light"><span class="fw-bold px-3">Watch now</span></button>
+                <button class="btn btn-dark border-white border-2">Add to playlist</button>
+            </div>
+            <div class="image-content">
+                <img src="./images/stplay.png" alt="">
+            </div>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <div class="container">
+            <div class="content">
+                <h1>Slider</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quisquam voluptatum et exercitationem natus ex sed, iure, nam aperiam, obcaecati eius ab dolores quasi adipisci ipsa dolor? Consectetur, voluptatum officia!
+                </p>
+                <button class="btn btn-light"><span class="fw-bold px-3">Watch now</span></button>
+                <button class="btn btn-dark border-white border-2">Add to playlist</button>
+            </div>
+            <div class="image-content">
+                <img src="./images/stplay.png" alt="">
+            </div>
+            </div>
+        </div>
+        
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+</div>
+<h2>Trending Now</h2>
+<div id="listCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+<div class="carousel-item active" data-bs-interval="3000">
+    <div class="container card-section d-flex">
+    <div class="card">
+        <img src="./images/ott10.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="card">
+        <img src="./images/ott9.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="card">
+        <img src="./images/ott8.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="card">
+        <img src="./images/ott10.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="card">
+        <img src="./images/ott9.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="card">
+        <img src="./images/ott8.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="card">
+          <img src="./images/ott10.jpg" class="card-img-top" alt="...">
+        </div>
+    </div>
+    </div>
+    <div class="carousel-item">
+        <div class="container card-section d-flex" data-bs-interval="3000">
+      <div class="card">
+        <img src="./images/ott9.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="card">
+        <img src="./images/ott8.jpg" class="card-img-top" alt="...">
+      </div>
+    </div>
+    </div>
+</div>
+  <button class="carousel-control-next ml-5" type="button" data-bs-target="#listCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
